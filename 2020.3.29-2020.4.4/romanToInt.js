@@ -83,3 +83,31 @@ const romanToIntSimple = function(s) {
  * 这个逻辑就简单明了多了，
  * 相比之下我的逻辑可以说是脱了裤子放屁了
  */
+
+// 基于上面的思路优化一次，但是提交了以后发现runtime更多了，
+const romanToIntOptimize = (s) => {
+  // 罗马数字对应的值
+  const map = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+  let res = 0;
+  const arr = s.split('');
+  const len = arr.length;
+  for (let i = 0; i < len; i++) {
+    try {
+      if (map[arr[i]] < map[arr[i + 1]]) {
+        res -= map[arr[i]];
+      } else {
+        res += map[arr[i]];
+      }
+    } catch (err) {
+    }
+  }
+  return res;
+}
