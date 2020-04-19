@@ -26,8 +26,10 @@ const quickSort = (arr) => {
   return [...quickSort(left), ...quickSort(right)];
 }
 const sortString = (s) => {
+  // 第一次排序
   let temp = s.split('').sort((a, b) => a.charCodeAt() - b.charCodeAt());
   let sortArr = [];
+  // 把分成二维数组 [[1], [2,2], [3,3,3]]
   for (let i = 0; i < temp.length; i ++) {
     let flag = temp[i++];
     const arr = [flag];
@@ -38,7 +40,6 @@ const sortString = (s) => {
     i--;
     sortArr.push(arr);
   }
-  console.log(sortArr);
   const res = [];
   while (sortArr.length) {
     for (let i = 0; i < sortArr.length; i++) {
@@ -59,5 +60,8 @@ console.log(sortString('aaaabbbbcccc') === 'abccbaabccba');
 console.log(sortString('rat') === 'art');
 
 /**
- * 这周疯狂加班，先把题目做了  空一点再来补充想法
+ * 这周疯狂加班
+ * 做一次排序先把字符串从a-z排序
+ * 再做第二次排序 把字符串变成二维数组 [[a..], [b...], ...,[z...]]
+ * 然后只需要来回遍历这个数组到数组里没有对象就得到了想要的结果
  */
