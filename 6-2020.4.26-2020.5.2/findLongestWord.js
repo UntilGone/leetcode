@@ -36,6 +36,8 @@ console.log(findLongestWord('abpcplea', ["a","b","c"]));  // 'a'
 
 /**
  * 本来是想通过正则来写的  给出的样例是通过的 但是有个超长的给超时了
+ * 重新有for循环解决
+ * 其实就是要求顺序固定 所以用for循环也能解决
  */
 const findLongestWordByReg = (s, d) => {
   let rs = '';
