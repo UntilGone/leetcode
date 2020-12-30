@@ -35,7 +35,7 @@ console.log(findNumberIn2DArray(testData, 5));  // true
 console.log(findNumberIn2DArray(testData, 20));  // false
 
 /**
- * 第一种，就是暴力循环，时间复杂度O(n)
+ * 第一种，就是暴力循环，时间复杂度O(n*m)
  * 第二种，一开始想的因为是有序的，就用二分查找
  * 看到了别人下标法，简单易懂
  * 取每一行最大的 大于target就在这一行往前找 小于就去下一行找
