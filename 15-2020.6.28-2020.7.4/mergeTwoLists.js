@@ -3,8 +3,7 @@
  * https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
  */
 
-
-function ListNode (val, next) {
+function ListNode(val, next) {
   this.val = val || 0;
   this.next = next || null;
 }
@@ -20,7 +19,7 @@ const mergeTwoLists = (l1, l2) => {
   } else {
     return new ListNode(l2.val, mergeTwoLists(l1, l2.next));
   }
-}
+};
 
 /**
  * 这道题是第二次做了

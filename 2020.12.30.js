@@ -5,7 +5,7 @@
  * 返回runningSum
  */
 
- // forEach遍历
+// forEach遍历
 // const runningSum = (nums) => {
 //   const res = [];
 //   let sum = Infinity;
